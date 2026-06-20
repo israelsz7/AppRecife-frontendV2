@@ -17,28 +17,6 @@ O app se comunica com dois servidores:
 - A API de Dados Abertos do Recife (dados dos postes).
 - O backend próprio do projeto (repositório AppRecife-backendV2), que guarda os relatos enviados.
 
-## Estrutura do projeto
-
-```
-AppRecife-frontendV2/
-├── App.js                          # navegação entre as telas
-├── app.json                        # configurações do Expo
-├── index.js                        # ponto de entrada do app
-├── assets/                         # ícones e imagens
-├── src/
-│   ├── telas/
-│   │   ├── TelaPostesProximos.js
-│   │   ├── TelaReportarProblema.js
-│   │   └── TelaMeusRelatos.js
-│   └── servicos/
-│       ├── config.js               # endereços das APIs usadas
-│       ├── postesService.js        # busca os postes na API do Recife
-│       ├── relatosService.js       # envia e busca relatos no backend
-│       └── localizacaoService.js   # pede permissão e pega a localização
-├── package.json
-└── LICENSE
-```
-
 ## Como rodar o projeto na sua máquina
 
 Pré-requisitos:
@@ -87,9 +65,3 @@ npx expo start
 - React Navigation (navegação entre telas)
 - expo-location (geolocalização do usuário)
 - API de Dados Abertos do Recife (dados dos postes de iluminação)
-
-## Observação
-
-A API da prefeitura usa vírgula como separador decimal nas coordenadas (exemplo: "-8,081171377"). O código trata esse formato antes de calcular distâncias, para evitar erros de leitura dos números.
-
-Esse app depende do backend (repositório AppRecife-backendV2) estar rodando para o envio e a listagem de relatos funcionarem.
